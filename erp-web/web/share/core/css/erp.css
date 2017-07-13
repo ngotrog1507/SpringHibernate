@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    height: 100vh;
+    font-family: Arial !important;
+    font-size: 12px !important;
+}
+.homediv{
+    background-image: url("../images/home_icon.png");
+    background-repeat: no-repeat;
+}
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("../images/banner_vietnam.jpg");
+    background-repeat: no-repeat;
+    clear:both; 
+    height: 100px;
+}
+.headerUser{
+    text-align: right;
+    color: rgb(13, 245, 0);
+    font-weight: bold;    
+    height: 31px;
+    padding-top: 7px;
+    position: absolute;
+    top:103px;
+    right: 5px;
+}
+.headerUser1{
+    float: right;
+    font-weight: bold;
+    height: 31px;
+    padding-top: 7px;
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    top: 3px;
+    color: white;
+}
+.headerSlogan{
+    clear: both;
+    height: 60px;
+}
+.headerLanguage{
+    clear: both;
+    height: 20px;
+    text-align: right;
+}
+.homePage{
+    float: right;
+    background-image: url("../images/home_icon.png");
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+}
+.divVn{
+    float: right;
+    background-image: url("../images/vietnam.jpg");
+    height: 16px;
+    width: 30px;
+    background-repeat: no-repeat;
+}
+.divEn{
+    float: right;
+    background-image: url("../images/english.png");
+    height: 16px;
+    background-repeat: no-repeat;
+    width: 30px;
+}
+.menu{
+    clear:both; 
+    background: white none repeat scroll 0 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 -5px 10px 0 #f0f0f0 inset;
+    width: 99.9%;
+}
+#cssmenu{
+    width: 100% !important;
+}
+.body{
+    height: 100%;
+    clear:both; 
+    padding: 1px;
+    position: relative;
+}
+.footer{
+    width:100%;
+    margin:0 auto;
+    margin-bottom:0px;
+    height: 20px !important;        
+    background-color: #4cb6ea !important;
+    color: white;
+    box-shadow: inset 0px -5px 10px 0px #F0F0F0;
+    border-bottom: 1px solid #E0E0E0;
+    -webkit-box-shadow: inset 0px -5px 10px 0px #F0F0F0;
+    -moz-box-shadow: inset 0px -5px 10px 0px #F0F0F0;
+    -o-box-shadow: inset 0px -5px 10px 0px #F0F0F0;
+    -ms-box-shadow: inset 0px -5px 10px 0px #F0F0F0;
+}
+.footer-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.menuBardemoBasicUsage .page-container {
+    padding: 32px; }
+.menuBardemoBasicUsage .page {
+    margin: 0 auto;
+    padding: 24px;
+    max-width: 680px;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25); }
+.menuBardemoBasicUsage .page h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 0;
+    font-weight: normal; }
+.menuBardemoBasicUsage .page p {
+    line-height: 1.6rem; }
+
+
+.toggler { width: 500px; height: 200px; }
+
+#message h3 { margin: 0; padding: 0.4em; text-align: center; }
+#message {
+    display: none;
+    padding: 0.4em;
+    position: absolute;
+    width: 240px;
+    z-index: 1000;
+    min-height: 90px;
+    text-align: center;
+    font-weight: bold;
+}
+.panel-heading {  
+    padding: 5px !important;
+    border-color: #fff #fff #c5c5c5 !important;
+    border-image: none !important;
+    border-style: solid !important;
+    border-width: 1px !important ;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    font-family: Arial !important;
+    font-size: 12px !important;
+}
+.lead {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    line-height: normal;
+}
+.label {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #666;
+    text-align: right;
+}

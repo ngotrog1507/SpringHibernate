@@ -1,0 +1,102 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd ">
+ 
+<!--    <context:component-scan base-package="com.viettel.erp.controller, com.viettel.erp.controller.category
+, com.viettel.erp.service, com.viettel.erp.bo" />-->
+    
+    <context:component-scan base-package="com.viettel.erp.*" />
+ 
+    <bean id="localeResolver"
+          class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="vi" />
+    </bean>
+
+    <bean id="loggerInterceptor" 
+          class="com.viettel.erp.base.LoggerInterceptor" /> 
+    <mvc:interceptors>  
+        <mvc:interceptor>
+            <mvc:mapping path="/*.html"/>
+            <mvc:mapping path="/*.json"/>
+            <ref bean="loggerInterceptor" />
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/*.html"/>
+            <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+                <property name="paramName" value="lang"></property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!-- Register the welcome.properties -->
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="com/viettel/erp/message/Language" />
+        <property name="defaultEncoding" value="UTF-8" />        
+    </bean>
+    <bean id="configSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename">
+            <value>com/viettel/erp/config/config</value>
+        </property>
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+    <bean id="casSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename">
+            <value>cas</value>
+        </property>
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+    
+    <mvc:resources mapping="/share/**" location="/share/" />
+	 
+    <!-- activates annotation driven binding -->
+    <mvc:annotation-driven>
+    </mvc:annotation-driven>
+   
+   <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass">
+            <value>
+                org.springframework.web.servlet.view.tiles3.TilesView
+            </value>
+        </property>
+        <property name="order" value="1" />
+    </bean>
+    
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location">
+            <value>/WEB-INF/spring/views.xml</value>
+        </property>
+        <property name="order" value="1" />
+        	 
+    </bean>
+
+    <bean id="tilesConfigurer"
+          class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles/tiles.xml</value>  
+                <value>/WEB-INF/tiles/tiles_admin.xml</value>  
+                <value>/WEB-INF/tiles/tiles_category.xml</value>  
+                <value>/WEB-INF/tiles/tiles_finance.xml</value>  
+                <value>/WEB-INF/tiles/tiles_constr_consult.xml</value>  
+            </list>
+        </property>
+    </bean>
+<!--   <bean id="validator"
+      class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>-->
+   <bean id="validator"
+        class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+</beans>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.1-b01-. --><xs:schema xmlns:tns="http://passport.viettel.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://passport.viettel.com/">
+
+<xs:element name="changePass" type="tns:changePass" />
+
+<xs:element name="changePassResponse" type="tns:changePassResponse" />
+
+<xs:element name="getAllowedApp" type="tns:getAllowedApp" />
+
+<xs:element name="getAllowedAppResponse" type="tns:getAllowedAppResponse" />
+
+<xs:element name="getAppFunctions" type="tns:getAppFunctions" />
+
+<xs:element name="getAppFunctionsResponse" type="tns:getAppFunctionsResponse" />
+
+<xs:element name="getRolesOfApp" type="tns:getRolesOfApp" />
+
+<xs:element name="getRolesOfAppResponse" type="tns:getRolesOfAppResponse" />
+
+<xs:element name="validate" type="tns:validate" />
+
+<xs:element name="validateIncludeIp" type="tns:validateIncludeIp" />
+
+<xs:element name="validateIncludeIpResponse" type="tns:validateIncludeIpResponse" />
+
+<xs:element name="validateResponse" type="tns:validateResponse" />
+
+<xs:complexType name="getAppFunctions">
+<xs:sequence>
+<xs:element name="domainCode" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAppFunctionsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllowedApp">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllowedAppResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validate">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="domainCode" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRolesOfApp">
+<xs:sequence>
+<xs:element name="domainCode" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRolesOfAppResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePass">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="oldPass" type="xs:string" minOccurs="0" />
+<xs:element name="newPass" type="xs:string" minOccurs="0" />
+<xs:element name="repeatPass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePassResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:response" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="response">
+<xs:sequence>
+<xs:element name="errorCode" type="tns:errorCode" minOccurs="0" />
+<xs:element name="values" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="errorCode">
+<xs:sequence>
+<xs:element name="code" type="xs:int" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validateIncludeIp">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="domainCode" type="xs:string" minOccurs="0" />
+<xs:element name="ipCheck" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validateIncludeIpResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8084/wsdlEx/MathSrv?wsdl" uri="wsdl/localhost_8084/wsdlEx/MathSrv.wsdl"/>
+    <system systemId="http://10.58.71.227:8181/wsdlEx/MathSrv?wsdl" uri="wsdl/10.58.71.227_8181/wsdlEx/MathSrv.wsdl"/>
+    <system systemId="http://10.58.71.227:8181/wsdlEx/MathSrv?xsd=1" uri="wsdl/10.58.71.227_8181/wsdlEx/MathSrv.xsd_1.xsd"/>
+    <system systemId="http://10.58.71.64:8001/passportv3/passportWS?wsdl" uri="wsdl/10.58.71.64_8001/passportv3/passportWS.wsdl"/>
+    <system systemId="http://10.58.71.64:8001/passportv3/passportWS?xsd=1" uri="wsdl/10.58.71.64_8001/passportv3/passportWS.xsd_1.xsd"/>
+</catalog>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>  
+  
+    
+    <definition name="constrConsult" extends="bodyContent.definition">  
+        <put-attribute name="title" value="constrConsult.title" />  
+        <put-attribute name="body" value="/WEB-INF/pages/constr/constrConsult.jsp" />  
+    </definition> 
+    <definition name="designBTS" extends="bodyContent.definition">  
+        <put-attribute name="title" value="constrConsult.title.designBTS" />  
+        <put-attribute name="body" value="/WEB-INF/pages/constr/designBTS.jsp" />  
+    </definition> 
+    <definition name="designHangingTranmission" extends="bodyContent.definition">  
+        <put-attribute name="title" value="constrConsult.title.designHangingTranmission" />  
+        <put-attribute name="body" value="/WEB-INF/pages/constr/designHangingTranmission.jsp" />  
+    </definition> 
+    <definition name="designUndergroundTranmission" extends="bodyContent.definition">  
+        <put-attribute name="title" value="constrConsult.title.designHangingTranmission" />  
+        <put-attribute name="body" value="/WEB-INF/pages/constr/designUndergroundTranmission.jsp" />  
+    </definition> 
+    
+  
+</tiles-definitions>  

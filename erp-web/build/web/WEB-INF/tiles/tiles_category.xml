@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>  
+    <definition name="costCenter" extends="bodyContent.definition">  
+        <put-attribute name="title" value="title.costcenter" />  
+        <put-attribute name="body" value="/WEB-INF/pages/category/costCenter.jsp" />  
+    </definition>  
+    <definition name="profitCenter" extends="bodyContent.definition">  
+        <put-attribute name="title" value="title.costcenter" />  
+        <put-attribute name="body" value="/WEB-INF/pages/category/profitCenter.jsp" />  
+    </definition>  
+    
+    <definition name="user_mngt" extends="bodyContent.definition">  
+        <put-attribute name="title" value="title.userManagement" />  
+        <put-attribute name="body" value="/WEB-INF/pages/admin/user/user_mngt.jsp" />  
+    </definition>  
+ 
+    <definition name="person" extends="bodyContent.definition">  
+        <put-attribute name="title" value="title.userManagement" />  
+        <put-attribute name="body" value="/WEB-INF/pages/admin/person/person.jsp" />  
+    </definition>  
+    
+    
+    <definition name="catConstrDesignItem" extends="bodyContent.definition">  
+        <put-attribute name="title" value="catConstrDesignItem.title" />  
+        <put-attribute name="body" value="/WEB-INF/pages/category/designItem.jsp" />  
+    </definition> 
+  
+</tiles-definitions>  

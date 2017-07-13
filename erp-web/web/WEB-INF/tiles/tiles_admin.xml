@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>  
+    <definition name="contact" extends="bodyContent.definition">  
+        <put-attribute name="title" value="title.contact" />  
+        <put-attribute name="body" value="/WEB-INF/pages/test/contact.jsp" />  
+    </definition>  
+  
+    <definition name="hello" extends="bodyContent.definition">  
+        <put-attribute name="title" value="title.hello" />  
+        <put-attribute name="body" value="/WEB-INF/pages/test/hello.jsp" />  
+    </definition>
+ 
+    <definition name="error" template="/error.jsp">  
+    </definition>   
+    
+</tiles-definitions>  

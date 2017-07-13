@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:jaxws="http://cxf.apache.org/jaxws" 
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://cxf.apache.org/jaxrs
+http://cxf.apache.org/schemas/jaxrs.xsd
+http://cxf.apache.org/jaxws 
+http://cxf.apache.org/schemas/jaxws.xsd">
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+    <!-- soap -->
+    <jaxws:endpoint id="userService" implementor="com.viettel.erp.webservice.CostCenterWSImpl" address="/costCenterWS"/>
+        <jaxws:endpoint implementor="com.viettel.erp.webservice.EmployeeWSImpl" address="/employeeWS"/>
+    
+    <!-- rest -->
+    <bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+    <bean id="jaxbProvider" class="org.apache.cxf.jaxrs.provider.JAXBElementProvider">
+        <property name="singleJaxbContext" value="true"/>
+        <property name="extraClass">
+            <list>
+                <value>com.viettel.erp.dto.ActIdUserDTO</value>
+                <value>com.viettel.erp.dto.EmployeeDTO</value> 
+            </list>
+        </property>
+    </bean>
+        
+    <jaxrs:server id="userServiceRest" address="/userServiceRest">
+        <jaxrs:providers>
+            <ref bean="jsonProvider" />
+        </jaxrs:providers>
+        <jaxrs:serviceBeans>
+            <bean id="userServiceClass" class="com.viettel.erp.rest.UserRsServiceImpl"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+    <jaxrs:server id="employeeServiceRest" address="/employeeServiceRest">
+        <jaxrs:providers>
+            <ref bean="jsonProvider" />
+            <ref bean="jaxbProvider" />
+        </jaxrs:providers>
+        <jaxrs:serviceBeans>
+            <bean id="employeeServiceClass" class="com.viettel.erp.rest.EmployeeRsServiceImpl"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+    
+    
+    <!--ktts-->
+    <!--soap-->
+     <jaxws:endpoint id="catConstrDesignItemService" implementor="com.viettel.erp.webservice.CatConstrDesignItemWSImpl" address="/catConstrDesignItemWS"/>
+     <jaxws:endpoint id="categoryService" implementor="com.viettel.erp.webservice.CategoryWSImpl" address="/categoryWS"/>
+     
+     <!--rest-->
+      <jaxrs:server id="catConstrDesignItemServiceRest" address="/catConstrDesignItemServiceRest">
+        <jaxrs:providers>
+            <ref bean="jsonProvider" />
+            <ref bean="jaxbProvider" />
+        </jaxrs:providers>
+        <jaxrs:serviceBeans>
+            <bean id="catConstrDesignItemServiceClass" class="com.viettel.erp.rest.CatConstrDesignItemRsServiceImpl"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+</beans>

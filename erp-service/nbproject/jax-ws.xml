@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="HelloWorldImpl">
+      <implementation-class>com.viettel.erp.webservice.HelloWorldImpl</implementation-class>
+    </service>
+    <service name="CostCenterWSImpl">
+      <implementation-class>com.viettel.erp.webservice.CostCenterWSImpl</implementation-class>
+    </service>
+    <service name="ActIdUserWSImpl">
+      <implementation-class>com.viettel.erp.webservice.ActIdUserWSImpl</implementation-class>
+    </service>
+    <service name="EmployeeWSImpl">
+      <implementation-class>com.viettel.erp.webservice.EmployeeWSImpl</implementation-class>
+    </service>
+    <service name="CatConstrDesignItemWSImpl">
+      <implementation-class>com.viettel.erp.webservice.CatConstrDesignItemWSImpl</implementation-class>
+    </service>
+    <service name="CatProvinceGroupWSImpl">
+      <implementation-class>com.viettel.erp.webservice.CatProvinceGroupWSImpl</implementation-class>
+    </service>
+    <service name="CategoryWSImpl">
+      <implementation-class>com.viettel.erp.webservice.CategoryWSImpl</implementation-class>
+    </service>
+    <service name="ConstrDesignWSImpl">
+      <implementation-class>com.viettel.erp.webservice.ConstrDesignWSImpl</implementation-class>
+    </service>
+    <service name="CatSelectBoxValueWSImpl">
+      <implementation-class>com.viettel.erp.webservice.CatSelectBoxValueWSImpl</implementation-class>
+    </service>
+    <service name="CatDesignItemWSImpl">
+      <implementation-class>com.viettel.erp.webservice.CatDesignItemWSImpl</implementation-class>
+    </service>
+    <service name="CatValueTypeWSImpl">
+      <implementation-class>com.viettel.erp.webservice.CatValueTypeWSImpl</implementation-class>
+    </service>
+    <service name="DesignItemPropertyWSImpl">
+      <implementation-class>com.viettel.erp.webservice.DesignItemPropertyWSImpl</implementation-class>
+    </service>
+    <service name="DesignItemWSImpl">
+      <implementation-class>com.viettel.erp.webservice.DesignItemWSImpl</implementation-class>
+    </service>
+    <service name="DesignItemTablePropertyWSImpl">
+      <implementation-class>com.viettel.erp.webservice.DesignItemTablePropertyWSImpl</implementation-class>
+    </service>
+    <service name="DesignItemPropertyValueWSImpl">
+      <implementation-class>com.viettel.erp.webservice.DesignItemPropertyValueWSImpl</implementation-class>
+    </service>
+    <service name="DesignItemTableProValueWSImpl">
+      <implementation-class>com.viettel.erp.webservice.DesignItemTableProValueWSImpl</implementation-class>
+    </service>
+  </services>
+  <clients/>
+  <jsr109>true</jsr109>
+</jax-ws>
